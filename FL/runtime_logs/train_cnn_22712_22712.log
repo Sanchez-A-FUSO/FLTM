@@ -1,0 +1,30 @@
+[训练] 已启用 class_weight（balanced）；若需纯交叉熵请加 --no-class-weight。
+round 01/5  loss=2.3067  sparse_categorical_accuracy=0.0534
+round 02/5  loss=2.0340  sparse_categorical_accuracy=0.4454
+round 03/5  loss=1.6092  sparse_categorical_accuracy=0.5858
+round 04/5  loss=1.1480  sparse_categorical_accuracy=0.6730
+round 05/5  loss=0.9155  sparse_categorical_accuracy=0.7192
+Traceback (most recent call last):
+  File "C:\Users\Meinfuhrer\Desktop\fl\federated\train_fl.py", line 542, in <module>
+    main()
+  File "C:\Users\Meinfuhrer\Desktop\fl\federated\train_fl.py", line 527, in main
+    ev = keras_model.evaluate(x_all, y_all, verbose=0, return_dict=False)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\keras\engine\training.py", line 1947, in evaluate
+    tmp_logs = self.test_function(iterator)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\def_function.py", line 915, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\def_function.py", line 954, in _call
+    results = self._stateful_fn(*args, **kwds)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\function.py", line 2496, in __call__
+    return graph_function._call_flat(
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\function.py", line 1862, in _call_flat
+    return self._build_call_outputs(self._inference_function.call(
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\function.py", line 499, in call
+    outputs = execute.execute(
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\execute.py", line 54, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+KeyboardInterrupt

@@ -1,0 +1,51 @@
+[训练] 已启用 class_weight（balanced）；若需纯交叉熵请加 --no-class-weight。
+Traceback (most recent call last):
+  File "C:\Users\Meinfuhrer\Desktop\fl\federated\train_fl.py", line 542, in <module>
+    main()
+  File "C:\Users\Meinfuhrer\Desktop\fl\federated\train_fl.py", line 502, in main
+    keras_model = train_fedavg_keras(
+  File "C:\Users\Meinfuhrer\Desktop\fl\federated\train_fl.py", line 282, in train_fedavg_keras
+    local.fit(
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\keras\engine\training.py", line 1564, in fit
+    tmp_logs = self.train_function(iterator)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\def_function.py", line 915, in __call__
+    result = self._call(*args, **kwds)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\def_function.py", line 947, in _call
+    return self._stateless_fn(*args, **kwds)  # pylint: disable=not-callable
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\function.py", line 2495, in __call__
+    filtered_flat_args) = self._maybe_define_function(args, kwargs)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\eager\function.py", line 2738, in _maybe_define_function
+    graph_function = self._function_cache.lookup(func_cache_key, True)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\core\function\polymorphism\function_cache.py", line 222, in lookup
+    dispatch_key = self._dispatch_table.dispatch(key)
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\core\function\polymorphism\type_dispatch.py", line 78, in dispatch
+    if request in self._dispatch_table:
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\core\function\polymorphism\function_cache.py", line 187, in __eq__
+    self.args_signature == other.args_signature and
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\core\function\trace_type\default_types.py", line 204, in __eq__
+    return self.components == other.components
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\core\function\trace_type\default_types.py", line 204, in __eq__
+    return self.components == other.components
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\core\function\trace_type\default_types.py", line 598, in __eq__
+    ) and self.identifier == other.identifier and self.base == other.base
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 476, in __eq__
+    self.__get_cmp_key() == other.__get_cmp_key())
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 531, in __get_cmp_key
+    return (type(self), self.__make_cmp_key(self._serialize()))
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 549, in __make_cmp_key
+    return tuple([self.__make_cmp_key(v) for v in value])
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 549, in <listcomp>
+    return tuple([self.__make_cmp_key(v) for v in value])
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 549, in __make_cmp_key
+    return tuple([self.__make_cmp_key(v) for v in value])
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 549, in <listcomp>
+    return tuple([self.__make_cmp_key(v) for v in value])
+  File "C:\Users\Meinfuhrer\Desktop\fl\.venv_tf310_dml\lib\site-packages\tensorflow\python\framework\type_spec.py", line 535, in __make_cmp_key
+    if isinstance(value, (int, float, bool, np.generic, dtypes.DType, TypeSpec,
+  File "C:\Users\Meinfuhrer\AppData\Local\Programs\Python\Python310\lib\abc.py", line 119, in __instancecheck__
+    return _abc_instancecheck(cls, instance)
+KeyboardInterrupt
